@@ -8,13 +8,26 @@
 .container{
     height: 80vh;
     width: 70%;
-    margin: auto;
+    margin: 20px auto;
     background-color: green;
 }
+.container::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
 aside{
     height: 100%;
     width: 30%;
     background-color: royalblue;
+    float: left;
+}
+
+main{
+    height: 100%;
+    width: 70%;
+    background-color: yellow;
+    float: left;
 }
 /* navbar dell'utente */
 .utente{
@@ -67,4 +80,41 @@ aside{
 .contatti{
     height: calc(100% - 190px);
     background-color: tomato;
+}
+
+/* inizio chat */
+
+.contatto-chat{
+    height: 60px;
+    background-color: rebeccapurple;
+    border-left: 1px solid black;
+}
+.contatto-chat::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  .contatto-chat-left{
+      margin-left: 20px;
+    float: left;
+    line-height: 60px;
+}
+
+.contatto-chat-right{
+    float: right;
+    line-height: 60px;
+}
+
+.messaggi{
+    height: calc(100% - 110px);
+    background-color: hotpink;
+}
+
+.scrivi-mess{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+    background-color: greenyellow;
 }
