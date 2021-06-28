@@ -18,14 +18,14 @@
   }
 aside{
     height: 100%;
-    width: 30%;
+    width: 300px;
     background-color: royalblue;
     float: left;
 }
 
 main{
     height: 100%;
-    width: 70%;
+    width: calc(100% - 300px);
     background-color: yellow;
     float: left;
 }
@@ -38,10 +38,13 @@ main{
     content: "";
     clear: both;
     display: table;
-  }
+}
 .nav-left{
     float: left;
     line-height: 60px;
+    margin-left: 5px;
+    display: flex;
+    align-items: center;
 }
 
 .nav-right{
@@ -49,8 +52,19 @@ main{
     line-height: 60px;
 }
 
+.nav-right i{
+    margin-right: 5px;
+}
+
+.nav-left img{
+    height: 45px;
+    width: auto;
+    border-radius: 35px;
+    margin-right: 5px;
+}
+
 .img-utente{
-    display: inline-blocks;
+    display: inline-block;
 }
 
 .nome-utente{
@@ -60,6 +74,21 @@ main{
 .pop-up{
     height: 80px;
     background-color: saddlebrown;
+    display: flex;
+    align-items: center;
+}
+
+.pop-up i{
+    font-size: 30px;
+    margin-right: 5px;
+}
+
+.pop-up div{
+    font-size: 12px;
+}
+
+.pop-up a{
+    color: gray;
 }
 
 /* zona contatti */
@@ -70,16 +99,42 @@ main{
     height: 50px;
 }
 
+
+
 .cerca-contatto{
+    width: 85%;
     background-color: white;
-    padding: 5px;
+    padding: 7px 40px;
     border: 1px solid white;
     border-radius: 5px;
+    margin-left: 10px;
 }
 
 .contatti{
     height: calc(100% - 190px);
     background-color: tomato;
+}
+
+.contatti ul {
+    list-style: none;
+}
+
+.contatti li{
+    height: 40px;
+    display: flex;
+    align-items: center;
+    background-color: white;
+}
+
+.contatti img{
+    height: 80%;
+    width: auto;
+    border-radius: 15px;
+    margin-right: 7px;
+}
+
+.chat{
+    font-size: 12px;
 }
 
 /* inizio chat */
