@@ -1,0 +1,42 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container{
+    height: 80vh;
+    width: 70%;
+    margin: auto;
+    background-color: green;
+}
+
+/* navbar dell'utente */
+.utente{
+    height: 100px;
+    width: 30%;
+    background-color: rebeccapurple;
+}
+.utente::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+.nav-left{
+    float: left;
+    line-height: 100px;
+}
+
+.nav-right{
+    float: right;
+    line-height: 100px;
+}
+
+.img-utente{
+    display: inline-blocks;
+}
+
+.nome-utente{
+    display: inline-block;
+}
