@@ -10,6 +10,7 @@
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 </head>
 <body>
+    <div id="app">
     <section class="container">
         <aside>
             <nav class="utente">
@@ -42,6 +43,13 @@
 
             <div class="contatti">
                <ul>
+                   <li v-for="item in contacts">
+                    <img v-bind:src="'img/avatar'+ item.avatar +'.jpg'" alt="">
+                    <div>
+                     <div><strong>{{item.name}}</strong></div>
+                     <div class="chat">questa è la chat</div>
+                    </div>
+                   </li>
                    <li>
                        <img src="img/avatar_2.jpg" alt="">
                        <div>
@@ -85,6 +93,7 @@
         </main>
 
     </section>
+    </div>
 
     <script src="js/script.js"></script>
 </body>
