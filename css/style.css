@@ -200,6 +200,29 @@ main{
     background-image: url(../img/mine.jpg);
     overflow-y: scroll;
 }
+.messaggi::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.mymess{
+    margin-top: 10px;
+    margin-left: auto;
+    background-color: greenyellow;
+    max-width: 50%;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.yourmess{
+    margin-top: 10px;
+    margin-right: auto;
+    background-color: grey;
+    max-width: 50%;
+    padding: 10px;
+    border-radius: 5px;
+}
 
 .scrivi-mess{
     display: flex;
