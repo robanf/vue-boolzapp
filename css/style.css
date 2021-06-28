@@ -4,12 +4,16 @@
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
+body{
+    background-image: url(../img/sfondo.jpg);
+    background-size: cover;
+}
 
 .container{
     height: 80vh;
     width: 70%;
     margin: 20px auto;
-    background-color: green;
+    background-color: lightgrey;
 }
 .container::after {
     content: "";
@@ -19,7 +23,7 @@
 aside{
     height: 100%;
     width: 300px;
-    background-color: royalblue;
+    background-color: lightgrey;
     float: left;
 }
 
@@ -32,7 +36,7 @@ main{
 /* navbar dell'utente */
 .utente{
     height: 60px;
-    background-color: rebeccapurple;
+    background-color:#eaeaea;
 }
 .utente::after {
     content: "";
@@ -54,6 +58,7 @@ main{
 
 .nav-right i{
     margin-right: 5px;
+    color: #b1b1b1;
 }
 
 .nav-left img{
@@ -73,14 +78,20 @@ main{
 
 .pop-up{
     height: 80px;
-    background-color: saddlebrown;
+    background-color: #8edafc;
     display: flex;
     align-items: center;
 }
 
 .pop-up i{
-    font-size: 30px;
-    margin-right: 5px;
+    font-size: 25px;
+    margin: 0px 5px;
+    /* filter: invert(); */
+    color: #8edafc;
+    border: 1px solid white;
+    border-radius: 50px;
+    background-color: white;
+    padding: 10px;
 }
 
 .pop-up div{
@@ -88,15 +99,23 @@ main{
 }
 
 .pop-up a{
-    color: gray;
+    color: #719395;
 }
 
 /* zona contatti */
 
 .ricerca{
     padding: 10px;
-    background-color: lightslategray;
+    background-color: #eaeaea;
     height: 50px;
+}
+.ricerca div{
+    background-color: white;
+    
+}
+.ricerca i{
+    padding: 0px 5px;
+    color: #b7bcc0;
 }
 
 
@@ -112,7 +131,8 @@ main{
 
 .contatti{
     height: calc(100% - 190px);
-    background-color: tomato;
+    background-color: white;
+    overflow-y: scroll;
 }
 
 .contatti ul {
@@ -124,9 +144,11 @@ main{
     display: flex;
     align-items: center;
     background-color: white;
+    border-bottom: 1px solid #d8d7d7;
 }
 
 .contatti img{
+    margin-left: 10px;
     height: 80%;
     width: auto;
     border-radius: 15px;
@@ -141,8 +163,8 @@ main{
 
 .contatto-chat{
     height: 60px;
-    background-color: rebeccapurple;
-    border-left: 1px solid black;
+    background-color: #eaeaea;
+    border-left: 1px solid #d8d7d7;
 }
 .contatto-chat::after {
     content: "";
@@ -151,19 +173,32 @@ main{
   }
 
   .contatto-chat-left{
-      margin-left: 20px;
+      height: 100%;
+    margin-left: 20px;
     float: left;
-    line-height: 60px;
+    display: flex;
+    align-items: center;
 }
 
+.contatto-chat-left img{
+    height: 80%;
+    width: auto;
+    border-radius: 30px;
+    margin-right: 10px;
+}
 .contatto-chat-right{
     float: right;
     line-height: 60px;
 }
+.contatto-chat-right i{
+    margin-right: 10px;
+    color: #b1b1b1;
+}
 
 .messaggi{
     height: calc(100% - 110px);
-    background-color: hotpink;
+    background-image: url(../img/mine.jpg);
+    overflow-y: scroll;
 }
 
 .scrivi-mess{
@@ -171,5 +206,17 @@ main{
     justify-content: space-around;
     align-items: center;
     height: 50px;
-    background-color: greenyellow;
+    background-color: #f3eeea;
+}
+
+.scrivi-mess i{
+    color: #b1b1b1;
+    font-size: 25px;
+}
+
+.casella-testo{
+    padding: 10px;
+    width: 85%;
+    border-radius: 10px;
+    border: 1px solid white;
 }
