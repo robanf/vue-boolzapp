@@ -95,7 +95,7 @@
 
             <div class="scrivi-mess">
                 <i class="far fa-smile"></i>
-                <input type="text" placeholder="scrivi un messaggio" class="casella-testo">
+                <input type="text" placeholder="scrivi un messaggio" v-model="newmess" class="casella-testo" @keyup.enter="addmess()">
                 <i class="fas fa-microphone"></i>
             </div>
 

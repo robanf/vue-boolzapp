@@ -3,6 +3,7 @@ const app= new Vue(
         el:"#app",
         data:{
             count:0,
+            newmess:"",
             contacts: [
                     {
                         name: 'Michele',
@@ -55,6 +56,17 @@ const app= new Vue(
             cambioutente(item,index){
                 this.count=index;
                 document.getElementById("mainname").innerHTML=item.name;
+            },
+            addmess(){
+                let date=new Date()
+                this.contacts[this.count].messages.push({
+                        date: date.getDate()+"/"+(date.getMonth()+1)+"/"+date.getFullYear()+"  "+ date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds(),
+                        text: this.newmess,
+                        status: 'sent'
+                    
+                });
+                this.newmess="";
+                console.log(temp);
             }
         }
     }
