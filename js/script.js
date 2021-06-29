@@ -4,7 +4,6 @@ const app= new Vue(
         data:{
             count:0,
             newmess:"",
-            open:false,
             contacts: [
                     {
                         name: 'Michele',
@@ -14,17 +13,20 @@ const app= new Vue(
                         {
                             date: '10/01/2020 15:30:55',
                             text: 'Hai portato a spasso il cane?',
-                            status: 'sent'
+                            status: 'sent',
+                            open:false,
                         },
                         {
                             date: '10/01/2020 15:50:00',
                             text: 'Ricordati di dargli da mangiare',
-                            status: 'sent'
+                            status: 'sent',
+                            open:false,
                         },
                         {
                             date: '10/01/2020 16:15:22',
                             text: 'Tutto fatto!',
-                            status: 'received'
+                            status: 'received',
+                            open:false,
                         }
                         ],
                     },
@@ -37,17 +39,20 @@ const app= new Vue(
                             {
                                 date: '20/03/2020 16:30:00',
                                 text: 'Ciao come stai?',
-                                status: 'sent'
+                                status: 'sent',
+                                open:false,
                             },
                             {
                                 date: '20/03/2020 16:30:55',
                                 text: 'Bene grazie! Stasera ci vediamo?',
-                                status: 'received'
+                                status: 'received',
+                                open:false,
                             },
                             {
                                 date: '20/03/2020 16:35:00',
                                 text: 'Mi piacerebbe ma devo andare a fare la spesa.',
-                                status: 'sent'
+                                status: 'sent',
+                                open:false,
                             }
                         ],
                     },
@@ -76,14 +81,14 @@ const app= new Vue(
 
                 this.newmess="";
             },
-            openmenu(){
-                if(this.open==false){
-                    this.open=true;
+            openmenu(item,index){
+                if(this.contacts[this.count].messages[index].open==false){
+                    this.contacts[this.count].messages[index].open=true;
                 }
                 else{
-                    this.open=false;
+                    this.contacts[this.count].messages[index].open=false;
                 }
-               console.log(this.open);
+               
             },
             deletemess(item,index){
                 this.contacts[this.count].messages.splice(index,1);
