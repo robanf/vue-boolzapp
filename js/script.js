@@ -4,6 +4,7 @@ const app= new Vue(
         data:{
             count:0,
             newmess:"",
+            open:false,
             contacts: [
                     {
                         name: 'Michele',
@@ -74,6 +75,18 @@ const app= new Vue(
             }) }, 1000);
 
                 this.newmess="";
+            },
+            openmenu(){
+                if(this.open==false){
+                    this.open=true;
+                }
+                else{
+                    this.open=false;
+                }
+               console.log(this.open);
+            },
+            deletemess(item,index){
+                this.contacts[this.count].messages.splice(index,1);
             }
         }
     }

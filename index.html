@@ -76,7 +76,8 @@
                     <div v-if="item.status=='sent'" class="main-mess-right">
                         <div  class="mymess">
                             <span>   {{item.text}} </span>
-                            <i class="fas fa-chevron-down"></i>
+                            <i class="fas fa-chevron-down" @click="openmenu(item,index)"></i>
+                            <div v-if="open==true" class="opzioni" @click="deletemess"> elimina messaggio</div>
                             <div class="date">
                                 {{item.date}}
                             </div>

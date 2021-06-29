@@ -242,6 +242,18 @@ main{
 .mymess i{
     display: none;
 }
+.opzioni{
+    padding: 5px;
+    border: 1px solid white;
+    background-color: white;
+    position: absolute;
+    right: 9px;
+    top: 25px;
+    z-index: 1;
+}
+
+
+
 
 .yourmess{
     margin-top: 15px;
