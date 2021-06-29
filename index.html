@@ -43,19 +43,12 @@
 
             <div class="contatti">
                <ul>
-                   <li v-for="item in contacts">
+                   <li v-for="item in contacts" v-on:click="cambioutente(element,index)">
                     <img v-bind:src="'img/avatar'+ item.avatar +'.jpg'" alt="">
                     <div>
                      <div><strong>{{item.name}}</strong></div>
                      <div class="chat">questa è la chat</div>
                     </div>
-                   </li>
-                   <li>
-                       <img src="img/avatar_2.jpg" alt="">
-                       <div>
-                        <div><strong>Franco</strong></div>
-                        <div class="chat">questa è la chat</div>
-                       </div>
                    </li>
                </ul>
             </div>
@@ -63,10 +56,10 @@
         
         <main>
             <div class="contatto-chat">
-                <div class="contatto-chat-left">
-                    <img src="img/avatar_2.jpg" alt="">
+                <div class="contatto-chat-left" id="maincontact">
+                    <img v-bind:src="'img/avatar'+ item.avatar +'.jpg'" alt="">
                     <div>
-                        <div><strong>Franco</strong></div>
+                        <div><strong>{{item.name}}</strong></div>
                         <div class="chat">ultimo accesso</div>
                     </div>
                 </div>
@@ -79,8 +72,21 @@
 
 
             <div class="messaggi">
-                <div class="mymess">ciao sono roberto</div>
-                <div class="yourmess"> ciao sono franco</div>
+                <div v-for="(item,index) in (contacts[this.count].messages)">
+                    <div v-if="item.status=='sent'" class="mymess">
+                        {{item.text}}
+                        <div class="date">
+                            {{item.date}}
+                        </div>
+                    </div>
+                    <div v-else class="yourmess">
+                        {{item.text}}
+                        <div class="date">
+                            {{item.date}}
+                        </div>
+                    </div>
+                    
+                </div>
             </div>
 
 

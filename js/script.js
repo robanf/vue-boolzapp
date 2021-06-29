@@ -2,10 +2,11 @@ const app= new Vue(
     {
         el:"#app",
         data:{
+            count:0,
             contacts: [
                     {
                         name: 'Michele',
-                        avatar: '_1',
+                        avatar: '_2',
                         visible: true,
                         messages: [
                         {
@@ -28,7 +29,7 @@ const app= new Vue(
 
                     {
                         name: 'Fabio',
-                        avatar: '_2',
+                        avatar: '_3',
                         visible: true,
                         messages: [
                             {
@@ -49,6 +50,12 @@ const app= new Vue(
                         ],
                     },
                 ],
+        },
+        methods:{
+            cambioutente(element,index){
+                this.count=index;
+                console.log(count);
+            }
         }
     }
 );  
