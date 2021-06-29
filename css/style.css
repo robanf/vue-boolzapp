@@ -222,6 +222,7 @@ main{
     max-width: 50%;
     padding: 10px;
     border-radius: 10px;
+    overflow-wrap: break-word;
 }
 
 .yourmess{
