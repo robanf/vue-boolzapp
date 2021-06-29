@@ -58,15 +58,23 @@ const app= new Vue(
                 document.getElementById("mainname").innerHTML=item.name;
             },
             addmess(){
-                let date=new Date()
+                let date=new Date();
                 this.contacts[this.count].messages.push({
                         date: date.getDate()+"/"+(date.getMonth()+1)+"/"+date.getFullYear()+"  "+ date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds(),
                         text: this.newmess,
                         status: 'sent'
                     
                 });
+
+                setTimeout(function(){  
+                    app.contacts[app.count].messages.push({
+                    date: date.getDate()+"/"+(date.getMonth()+1)+"/"+date.getFullYear()+"  "+ date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds(),
+                    text: "ciao mi piace il miele",
+                    status: 'received'
+                
+            }) }, 1000);
+
                 this.newmess="";
-                console.log(temp);
             }
         }
     }
