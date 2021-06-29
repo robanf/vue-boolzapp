@@ -223,6 +223,24 @@ main{
     padding: 10px;
     border-radius: 10px;
     overflow-wrap: break-word;
+    position: relative;
+}
+
+.mymess:hover i{
+    display: block;
+    position: absolute;
+    border: 2px solid #dcf8c6bd;
+    background-color: #dcf8c6bd;
+    right: 7px;
+    top: 8px;
+}
+
+.mymess:hover span{
+    margin-right: 15px;
+}
+
+.mymess i{
+    display: none;
 }
 
 .yourmess{
@@ -233,6 +251,25 @@ main{
     max-width: 50%;
     padding: 10px;
     border-radius: 10px;
+    overflow-wrap: break-word;
+    position: relative;
+}
+
+.yourmess:hover i{
+    display: block;
+    position: absolute;
+    border: 2px solid #ffffffcb;
+    background-color: #ffffffcb;
+    right: 7px;
+    top: 8px;
+}
+
+.yourmess:hover span{
+    margin-right: 15px;
+}
+
+.yourmess i{
+    display: none;
 }
 
 .scrivi-mess{

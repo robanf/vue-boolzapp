@@ -55,7 +55,6 @@ const app= new Vue(
         methods:{
             cambioutente(item,index){
                 this.count=index;
-                document.getElementById("mainname").innerHTML=item.name;
             },
             addmess(){
                 let date=new Date();
