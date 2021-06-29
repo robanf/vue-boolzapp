@@ -73,19 +73,22 @@
 
             <div class="messaggi">
                 <div v-for="(item,index) in (contacts[this.count].messages)">
-                    <div v-if="item.status=='sent'" class="mymess">
-                        {{item.text}}
-                        <div class="date">
-                            {{item.date}}
+                    <div v-if="item.status=='sent'" class="main-mess-right">
+                        <div  class="mymess">
+                            <span>   {{item.text}} </span>
+                            <div class="date">
+                                {{item.date}}
+                            </div>
                         </div>
                     </div>
-                    <div v-else class="yourmess">
-                        {{item.text}}
-                        <div class="date">
-                            {{item.date}}
+                    <div v-else class="main-mess-left">
+                        <div class="yourmess">
+                            {{item.text}}
+                            <div class="date">
+                                {{item.date}}
+                            </div>
                         </div>
                     </div>
-                    
                 </div>
             </div>
 
