@@ -43,7 +43,7 @@
 
             <div class="contatti">
                <ul>
-                   <li v-for="item in contacts" v-on:click="cambioutente(element,index)">
+                   <li v-for="(item,index) in contacts" v-on:click="cambioutente(item,index)">
                     <img v-bind:src="'img/avatar'+ item.avatar +'.jpg'" alt="">
                     <div>
                      <div><strong>{{item.name}}</strong></div>
@@ -57,9 +57,9 @@
         <main>
             <div class="contatto-chat">
                 <div class="contatto-chat-left" id="maincontact">
-                    <img v-bind:src="'img/avatar'+ item.avatar +'.jpg'" alt="">
+                    <img :src="'img/avatar_'+ this.imgattiva +'.jpg'" alt="">
                     <div>
-                        <div><strong>{{item.name}}</strong></div>
+                        <div><strong id="mainname">Michele</strong></div>
                         <div class="chat">ultimo accesso</div>
                     </div>
                 </div>

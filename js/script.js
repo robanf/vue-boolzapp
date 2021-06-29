@@ -3,6 +3,7 @@ const app= new Vue(
         el:"#app",
         data:{
             count:0,
+            imgattiva:'2',
             contacts: [
                     {
                         name: 'Michele',
@@ -52,9 +53,10 @@ const app= new Vue(
                 ],
         },
         methods:{
-            cambioutente(element,index){
+            cambioutente(item,index){
                 this.count=index;
-                console.log(count);
+                document.getElementById("mainname").innerHTML=item.name;
+                this.imgattiva=item.avatar[1];
             }
         }
     }
