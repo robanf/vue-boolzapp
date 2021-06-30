@@ -4,6 +4,8 @@ const app= new Vue(
         data:{
             count:0,
             newmess:"",
+            newfind:"",
+            findcontacts:[],
             contacts: [
                     {
                         name: 'Michele',
@@ -92,6 +94,26 @@ const app= new Vue(
             },
             deletemess(item,index){
                 this.contacts[this.count].messages.splice(index,1);
+            },
+            findutente(){
+                if(this.newfind==""){
+                    this.findcontacts==this.contacts;
+                }
+                else{
+                    for(let i=0;i<this.contacts.length;i++) {
+                        name=this.contacts[i].name;
+                        avatar=this.contacts[i].avatar;
+                        if(name.includes(this.newfind)){
+                            /* console.log(name);
+                            console.log(avatar); */
+                            this.findcontacts.push({
+                                name,
+                                avatar
+                            })
+                        }
+                    };
+                console.log(this.findcontacts);
+                }
             }
         }
     }
