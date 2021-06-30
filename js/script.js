@@ -134,6 +134,11 @@ const app= new Vue(
             openmenu(item,index){
                 if(this.contacts[this.count].messages[index].open==false){
                     this.contacts[this.count].messages[index].open=true;
+                    for(let i=0;i<this.contacts[this.count].messages.length;i++){
+                        if(i!=index){
+                            this.contacts[this.count].messages[i].open=false
+                        }
+                    }
                 }
                 else{
                     this.contacts[this.count].messages[index].open=false;
