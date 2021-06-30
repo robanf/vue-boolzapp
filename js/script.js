@@ -156,7 +156,9 @@ const app= new Vue(
                 }
                 else{
                         for(let i=0;i<this.contacts.length;i++){
-                            if(this.contacts[i].name.includes(this.newfind)){
+                            mainname=this.contacts[i].name.toLowerCase();
+                            newfind=this.newfind.toLowerCase();
+                            if(mainname.includes(newfind)){
                                 this.contacts[i].visible=true;
                             }
                             else{
