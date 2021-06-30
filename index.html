@@ -43,9 +43,9 @@
 
             <div class="contatti">
                <ul>
-                   <li v-for="(item,index) in findcontacts" @click="cambioutente(item,index)">
-                    <img v-bind:src="'img/avatar'+ item.avatar +'.jpg'" alt="">
-                    <div>
+                   <li  v-for="(item,index) in contacts" v-if="item.visible" @click="cambioutente(item,index)">
+                    <img v-if="item.visible" v-bind:src="'img/avatar'+ item.avatar +'.jpg'" alt="">
+                    <div v-if="item.visible">
                      <div><strong>{{item.name}}</strong></div>
                      <div class="chat">questa è la chat</div>
                     </div>

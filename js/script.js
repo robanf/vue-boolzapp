@@ -97,23 +97,22 @@ const app= new Vue(
             },
             findutente(){
                 if(this.newfind==""){
-                    this.findcontacts==this.contacts;
+                    for(let i=0;i<this.contacts.length;i++){
+                        this.contacts[i].visible=true;
+                    }
                 }
                 else{
-                    for(let i=0;i<this.contacts.length;i++) {
-                        name=this.contacts[i].name;
-                        avatar=this.contacts[i].avatar;
-                        if(name.includes(this.newfind)){
-                            /* console.log(name);
-                            console.log(avatar); */
-                            this.findcontacts.push({
-                                name,
-                                avatar
-                            })
+                        for(let i=0;i<this.contacts.length;i++){
+                            if(this.contacts[i].name.includes(this.newfind)){
+                                this.contacts[i].visible=true;
+                            }
+                            else{
+                                this.contacts[i].visible=false;
+                            }
                         }
                     };
-                console.log(this.findcontacts);
-                }
+                
+                
             }
         }
     }
