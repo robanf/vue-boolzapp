@@ -115,7 +115,8 @@ const app= new Vue(
                 this.contacts[this.count].messages.push({
                         date: date.getDate()+"/"+(date.getMonth()+1)+"/"+date.getFullYear()+"  "+ date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds(),
                         text: this.newmess,
-                        status: 'sent'
+                        status: 'sent',
+                        open:false
                     
                 });
 
@@ -123,7 +124,8 @@ const app= new Vue(
                     app.contacts[app.count].messages.push({
                     date: date.getDate()+"/"+(date.getMonth()+1)+"/"+date.getFullYear()+"  "+ date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds(),
                     text: "ciao mi piace il miele",
-                    status: 'received'
+                    status: 'received',
+                    open:false
                 
             }) }, 1000);
 
