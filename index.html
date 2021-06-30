@@ -86,7 +86,8 @@
                     <div v-else class="main-mess-left">
                         <div class="yourmess">
                             <span>{{item.text}}</span>
-                            <i class="fas fa-chevron-down"></i>
+                            <i class="fas fa-chevron-down" @click="openmenu(item,index)"></i>
+                            <div v-if="contacts[count].messages[index].open" class="opzioni" @click="deletemess(item,index)"> elimina messaggio</div>
                             <div class="date">
                                 {{item.date}}
                             </div>
