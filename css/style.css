@@ -322,6 +322,15 @@ main{
     border: none;
 }
 
+.yourmess:hover #test{
+    /* all:unset; */
+    display: inline-block;
+    position: relative;
+    right: 0;
+    top: 0;
+    border: none;
+}
+
 .date i{
    display: inline-block;
 }
