@@ -105,6 +105,13 @@ const app= new Vue(
                     },
                         
                 ],
+            risposte:[
+                "si mi piacerebbe molto",
+                "non posso ho impegni",
+                "ti farò sapere",
+                "chi sei e chi ti ha dato il mio numero?",
+                "se non fossi cosi antipatico ti direi di si"
+            ]
         },
         methods:{
             cambioutente(item,index){
@@ -124,7 +131,7 @@ const app= new Vue(
                 setTimeout(function(){  
                     app.contacts[app.count].messages.push({
                     date: date.getDate()+"/"+(date.getMonth()+1)+"/"+date.getFullYear()+"  "+ date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds(),
-                    text: "ciao mi piace il miele",
+                    text: app.risposte[Math.round(Math.random() * 5)],
                     status: 'received',
                     open:false
                 
