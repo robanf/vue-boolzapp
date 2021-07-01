@@ -120,6 +120,7 @@ const app= new Vue(
                     
                 });
 
+                document.getElementById("accesso").innerHTML="sta scrivendo..."
                 setTimeout(function(){  
                     app.contacts[app.count].messages.push({
                     date: date.getDate()+"/"+(date.getMonth()+1)+"/"+date.getFullYear()+"  "+ date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds(),
@@ -127,7 +128,9 @@ const app= new Vue(
                     status: 'received',
                     open:false
                 
-            }) }, 1000);
+                });
+                document.getElementById("accesso").innerHTML="ultimo accesso:"+date.getDate()+"/"+(date.getMonth()+1)+"/"+date.getFullYear()+"  "+ date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
+             }, 1000);
 
                 this.newmess="";
             },

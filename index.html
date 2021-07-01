@@ -60,7 +60,7 @@
                     <img :src="'img/avatar'+ contacts[this.count].avatar +'.jpg'" alt="">
                     <div>
                         <div><strong id="mainname">{{contacts[this.count].name}}</strong></div>
-                        <div class="chat">ultimo accesso</div>
+                        <div class="chat" id="accesso">ultimo accesso:{{contacts[this.count].messages[contacts[this.count].messages.length-1].date}}</div>
                     </div>
                 </div>
                 <div class="contatto-chat-right">
