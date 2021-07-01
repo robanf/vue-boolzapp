@@ -208,7 +208,7 @@ main{
 
 .main-mess-right{
     display: flex;
-    justify-content: end;
+    justify-content:flex-end;
 }
 
 .main-mess-left{
@@ -311,4 +311,9 @@ main{
     color: rgb(34, 34, 34);
     font-size: 10px;
 
+}
+
+.date i{
+    display: inline-block;
+    position: relative;
 }

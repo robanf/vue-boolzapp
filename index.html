@@ -47,7 +47,7 @@
                     <img v-if="item.visible" v-bind:src="'img/avatar'+ item.avatar +'.jpg'" alt="">
                     <div v-if="item.visible">
                      <div><strong>{{item.name}}</strong></div>
-                     <div class="chat">questa è la chat</div>
+                     <div class="chat">{{item.messages[item.messages.length -1].text.substring(0,20)}}...</div>
                     </div>
                    </li>
                </ul>
@@ -80,6 +80,7 @@
                             <div v-if="contacts[count].messages[index].open" class="opzioni" @click="deletemess(item,index)"> elimina messaggio</div>
                             <div class="date">
                                 {{item.date}}
+                                <i class="fas fa-chevron-down"></i>
                             </div>
                         </div>
                     </div>
