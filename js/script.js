@@ -128,16 +128,19 @@ const app= new Vue(
                 });
 
                 document.getElementById("accesso").innerHTML="sta scrivendo..."
+                setTimeout(function(){
+                    document.getElementsByClassName("test").style.color = "blue";
+                },1000)
                 setTimeout(function(){  
                     app.contacts[app.count].messages.push({
                     date: date.getDate()+"/"+(date.getMonth()+1)+"/"+date.getFullYear()+"  "+ date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds(),
-                    text: app.risposte[Math.round(Math.random() * 5)],
+                    text: app.risposte[Math.round(Math.random() * 4)],
                     status: 'received',
                     open:false
                 
                 });
                 document.getElementById("accesso").innerHTML="ultimo accesso:"+date.getDate()+"/"+(date.getMonth()+1)+"/"+date.getFullYear()+"  "+ date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
-             }, 1000);
+             }, 2000);
 
                 this.newmess="";
             },
